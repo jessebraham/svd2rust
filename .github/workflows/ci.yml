@@ -46,7 +46,7 @@ jobs:
         env:
           RUSTFLAGS: -D warnings
 
-      - run: cargo check --target ${{ matrix.TARGET }} --no-default-features
+      - run: cargo check --target ${{ matrix.TARGET }} --no-default-features --features=yaml
 
       - run: cargo clippy --target ${{ matrix.TARGET }}
 
